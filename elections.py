@@ -11,8 +11,8 @@ def lambda_handler(event, context):
 
     # log event info
     print json.dumps(event) ;
-    # function UpdateSystem releads data, if the 'name' querystring parameter is word... run update...
-    if (event['name'] == "JorgeReload"):
+    # function UpdateSystem releads data, if the 'name' querystring parameter is 'ReloadData... run update...
+    if (event['name'] == "ReloadData"):
         UpdateSystem();
         return "System Updated";
     else:
