@@ -9,7 +9,9 @@ from boto3.dynamodb.conditions import Key, Attr
 
 def lambda_handler(event, context):
 
+    # log event info
     print json.dumps(event) ;
+    # function UpdateSystem releads data, if the 'name' querystring parameter is word... run update...
     if (event['name'] == "JorgeReload"):
         UpdateSystem();
         return "System Updated";
