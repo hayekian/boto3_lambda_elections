@@ -12,6 +12,7 @@ def lambda_handler(event, context):
     # log event info
     print json.dumps(event) ;
     # function UpdateSystem releads data, if the 'name' querystring parameter is 'ReloadData... run update...
+    # important to note that UpdateSystem will time-out if called via an API gateway invocation because of 10 seconds timeout
     if (event['name'] == "ReloadData"):
         UpdateSystem();
         return "System Updated";
