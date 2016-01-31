@@ -2,5 +2,8 @@
 python aws lambda function which provides 2016 election info
 
 
+Gets election info from gov site and loads it into dynamodb tables
+
+
 
 
